@@ -1,10 +1,10 @@
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:dropshpper_app/src/utils/colors_resource.dart';
+import 'package:dropshpper_app/src/utils/images.dart';
+import 'package:flutter/material.dart';
 
-import '../../../../utils/colors_resource.dart';
+import '../app_theme.dart';
 import '../models/message_model.dart';
 import '../models/user_model.dart';
-import '../app_theme.dart';
-import 'package:flutter/material.dart';
 
 class Conversation extends StatelessWidget {
   const Conversation({
@@ -40,8 +40,7 @@ class Conversation extends StatelessWidget {
                             if (!isMe)
                               CircleAvatar(
                                 radius: 15,
-                                backgroundImage:
-                                    AssetImage('assets/images/profile_pic.png'),
+                                backgroundImage: AssetImage(Images.profile_1),
                               ),
                             SizedBox(
                               width: 10,
@@ -76,7 +75,7 @@ class Conversation extends StatelessWidget {
                                           style: MyTheme.bodyTextMessage
                                               .copyWith(
                                                   color: isMe
-                                                      ? Colors.white
+                                                      ? colorWhite
                                                       : Colors.grey[800]),
                                         )
                                       : Container(
@@ -85,7 +84,7 @@ class Conversation extends StatelessWidget {
                                             style: MyTheme.bodyTextMessage
                                                 .copyWith(
                                                     color: isMe
-                                                        ? Colors.white
+                                                        ? colorWhite
                                                         : Colors.grey[800]),
                                           ),
                                         ),
@@ -94,8 +93,8 @@ class Conversation extends StatelessWidget {
                                 if (isMe)
                                   CircleAvatar(
                                     radius: 15,
-                                    backgroundImage: AssetImage(
-                                        'assets/images/Mask Group 231.png'),
+                                    backgroundImage:
+                                        AssetImage(Images.profile_2),
                                   ),
                               ],
                             ),

@@ -1,8 +1,12 @@
+import 'package:dropshpper_app/src/utils/colors_resource.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
+import '../../../../../utils/images.dart';
 import '../../../../../widgets/my_button.dart';
+import '../../../delivery_parcel_details/delivery_parcal_details.dart';
 import '../../../started/widgets/custum_card.dart';
 
 class CompletedTabScreen extends StatefulWidget {
@@ -23,7 +27,7 @@ class _CompletedTabScreenState extends State<CompletedTabScreen> {
             Card(
               elevation: 6,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(10.r),
               ),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -31,8 +35,7 @@ class _CompletedTabScreenState extends State<CompletedTabScreen> {
                   children: [
                     Row(
                       children: [
-                        Image.asset('assets/images/package.png',
-                            width: 40, height: 40),
+                        Image.asset(Images.tab_3, width: 40.w, height: 40.h),
                         SizedBox(width: 10.w),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -49,8 +52,12 @@ class _CompletedTabScreenState extends State<CompletedTabScreen> {
                       children: [
                         Row(
                           children: [
-                            Image.asset('assets/images/location (6).png',
-                                width: 40, height: 40),
+                            CircleAvatar(
+                              radius: 20.r,
+                              backgroundColor: appMainColor,
+                              child: Image.asset(Images.tab_2,
+                                  width: 30.w, height: 30.h),
+                            ),
                             SizedBox(width: 10.w),
                             Column(
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -65,11 +72,16 @@ class _CompletedTabScreenState extends State<CompletedTabScreen> {
                         ),
                       ],
                     ),
+                    SizedBox(height: 10.h),
                     // Stepper(steps: , currentStep: 0),
                     Row(
                       children: [
-                        Image.asset('assets/images/pickup.png',
-                            width: 40, height: 40),
+                        CircleAvatar(
+                          radius: 20,
+                          backgroundColor: appMainColor,
+                          child: Image.asset(Images.tab_3,
+                              width: 30.w, height: 30.h),
+                        ),
                         SizedBox(width: 10.w),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -83,7 +95,7 @@ class _CompletedTabScreenState extends State<CompletedTabScreen> {
                       ],
                     ),
                     Divider(),
-                    MyCustomButton2(
+                    MyCustomTabbarButton3(
                       text: "Completed",
                       width: 250.w,
                       icon_child: Container(
@@ -93,16 +105,18 @@ class _CompletedTabScreenState extends State<CompletedTabScreen> {
                             shape: BoxShape.circle,
                             // borderRadius: BorderRadius.circular(30),
                             border: Border.all(
-                              color: Colors.white,
+                              color: colorWhite,
                               width: 1,
                             ),
                             // color: Colors.white,
                           ),
-                          child: Icon(Icons.check, color: Colors.white)),
+                          child: Icon(Icons.check, color: colorWhite)),
                       // icon: Icon(Icons.check),
                       colorss: Colors.lightBlue,
                       mergin: EdgeInsets.all(0),
-                      onPressedbtn: () {},
+                      onPressedbtn: () {
+                        Get.to(DeliveryParcalDetailsScreen());
+                      },
                     ),
                   ],
                 ),
@@ -120,8 +134,7 @@ class _CompletedTabScreenState extends State<CompletedTabScreen> {
                   children: [
                     Row(
                       children: [
-                        Image.asset('assets/images/package.png',
-                            width: 40, height: 40),
+                        Image.asset(Images.tab_3, width: 40, height: 40),
                         SizedBox(width: 10.w),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -133,13 +146,17 @@ class _CompletedTabScreenState extends State<CompletedTabScreen> {
                         ),
                       ],
                     ),
-                    Divider(),
+                    Divider(color: colorSplash),
                     Row(
                       children: [
                         Row(
                           children: [
-                            Image.asset('assets/images/location (6).png',
-                                width: 40, height: 40),
+                            CircleAvatar(
+                              radius: 20,
+                              backgroundColor: appMainColor,
+                              child: Image.asset(Images.tab_2,
+                                  width: 30, height: 30),
+                            ),
                             SizedBox(width: 10.w),
                             Column(
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -154,11 +171,16 @@ class _CompletedTabScreenState extends State<CompletedTabScreen> {
                         ),
                       ],
                     ),
+                    SizedBox(height: 10),
                     // Stepper(steps: , currentStep: 0),
                     Row(
                       children: [
-                        Image.asset('assets/images/pickup.png',
-                            width: 40, height: 40),
+                        CircleAvatar(
+                          radius: 20,
+                          backgroundColor: appMainColor,
+                          child:
+                              Image.asset(Images.tab_3, width: 30, height: 30),
+                        ),
                         SizedBox(width: 10.w),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -171,8 +193,8 @@ class _CompletedTabScreenState extends State<CompletedTabScreen> {
                         ),
                       ],
                     ),
-                    Divider(),
-                    MyCustomButton2(
+                    Divider(color: colorSplash),
+                    MyCustomTabbarButton3(
                       text: "Completed",
                       width: 250.w,
                       icon_child: Container(
@@ -182,22 +204,23 @@ class _CompletedTabScreenState extends State<CompletedTabScreen> {
                             shape: BoxShape.circle,
                             // borderRadius: BorderRadius.circular(30),
                             border: Border.all(
-                              color: Colors.white,
+                              color: colorWhite,
                               width: 1,
                             ),
                             // color: Colors.white,
                           ),
-                          child: Icon(Icons.check, color: Colors.white)),
+                          child: Icon(Icons.check, color: colorWhite)),
                       // icon: Icon(Icons.check),
                       colorss: Colors.lightBlue,
                       mergin: EdgeInsets.all(0),
-                      onPressedbtn: () {},
+                      onPressedbtn: () {
+                        Get.to(DeliveryParcalDetailsScreen());
+                      },
                     ),
-                    SizedBox(height: 20.h),
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

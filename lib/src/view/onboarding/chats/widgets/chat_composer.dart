@@ -1,41 +1,49 @@
 import 'package:dropshpper_app/src/utils/colors_resource.dart';
+import 'package:dropshpper_app/src/utils/images.dart';
 import 'package:flutter/material.dart';
-
-import '../app_theme.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Container buildChatComposer() {
   return Container(
-    padding: EdgeInsets.only(right: 20, left: 20, top: 20, bottom: 10),
-    color: Colors.white,
+    padding: EdgeInsets.only(right: 12, left: 12, top: 5, bottom: 10),
+    color: colorWhite,
     // height: 80,
     child: Row(
       children: [
         Expanded(
           child: Container(
             padding: EdgeInsets.symmetric(horizontal: 14),
-            height: 45,
+            height: 45.h,
             decoration: BoxDecoration(
-              color: Colors.grey[200],
-              borderRadius: BorderRadius.circular(30),
+              color: appMainColor,
+              borderRadius: BorderRadius.circular(10),
             ),
             child: Row(
               children: [
-                // Image.asset('Images.bar2', height: 20, width: 20),
                 SizedBox(
-                  width: 10,
+                  width: 10.w,
                 ),
                 Expanded(
                   child: TextField(
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Type your message ...',
-                      hintStyle: TextStyle(color: Colors.grey[500]),
+                      hintStyle: TextStyle(color: colorSplash),
                     ),
                   ),
                 ),
-                CircleAvatar(
-                  radius: 15,
-                  backgroundImage: AssetImage('assets/images/Path 12630.png'),
+                Container(
+                  width: 50.w,
+                  height: 35.h,
+                  decoration: BoxDecoration(
+                    color: colorWhite,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image.asset(Images.chat_last_icon,
+                        height: 20.h, width: 20.w),
+                  ),
                 ),
               ],
             ),

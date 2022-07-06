@@ -2,6 +2,9 @@ import 'package:dropshpper_app/src/helper/content_model.dart';
 import 'package:dropshpper_app/src/view/onboarding/choos_language/choose_language.dart';
 import 'package:dropshpper_app/src/widgets/my_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../utils/colors_resource.dart';
 
 class OnbordingScreen extends StatefulWidget {
   @override
@@ -28,18 +31,19 @@ class _OnbordingScreenState extends State<OnbordingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: colorTransprent,
         elevation: 0,
         title: Center(
           child: Text(
             "DropShpper",
-            style: TextStyle(color: Colors.black),
+            style: TextStyle(color: colorBlack),
           ),
         ),
       ),
       body: Column(
         children: [
-          Expanded(
+          Container(
+            height: 450,
             child: PageView.builder(
               controller: _controller,
               itemCount: contents.length,
@@ -55,9 +59,9 @@ class _OnbordingScreenState extends State<OnbordingScreen> {
                     children: [
                       Image.asset(
                         contents[i].image!,
-                        // height: 300,
+                        height: 200,
                       ),
-                      SizedBox(height: 40),
+                      SizedBox(height: 40.h),
                       Text(
                         contents[i].title!,
                         style: const TextStyle(
@@ -65,13 +69,13 @@ class _OnbordingScreenState extends State<OnbordingScreen> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 20),
+                      SizedBox(height: 20.h),
                       Text(
                         contents[i].discription!,
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 18,
-                          color: Colors.grey,
+                          color: colorGray,
                         ),
                       ),
                     ],
@@ -80,16 +84,21 @@ class _OnbordingScreenState extends State<OnbordingScreen> {
               },
             ),
           ),
-          Container(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: List.generate(
-                contents.length,
-                (index) => buildDot(index, context),
+          Expanded(
+            child: Container(
+              height: 40.h,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: List.generate(
+                  contents.length,
+                  (index) => buildDot(index, context),
+                ),
               ),
             ),
           ),
-          MyCustomButton2(
+          MyCustomButton(
+            colorss: appMainColor,
+            mergin: EdgeInsets.symmetric(horizontal: 20),
             text: currentIndex == contents.length - 1 ? "GET STARTED" : "Next",
             onPressedbtn: () {
               if (currentIndex == contents.length - 1) {
@@ -136,7 +145,7 @@ class _OnbordingScreenState extends State<OnbordingScreen> {
       margin: EdgeInsets.only(right: 5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: Theme.of(context).primaryColor,
+        color: appMainColor,
       ),
     );
   }

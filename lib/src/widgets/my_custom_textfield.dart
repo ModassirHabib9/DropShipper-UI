@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class MyCustomTextField extends StatelessWidget {
   final String hint;
   final TextInputType? kry;
   final double? width;
+  final double? hight;
+  final int? maxLines;
   // final Function? onChange;
   // final Function validator;
   final Widget? suffixIcon;
@@ -26,6 +29,8 @@ class MyCustomTextField extends StatelessWidget {
     this.prefixIcon,
     // required this.onTap,
     this.controller,
+    this.hight,
+    this.maxLines,
     // required this.borderColor,
     // required this.obscureText,
     /*required this.decoration*/
@@ -34,9 +39,11 @@ class MyCustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: width,
+      height: hight,
       child: TextFormField(
         // onChanged: onChange!,
         controller: controller,
+        maxLines: maxLines,
         // controller: callback,
         // autovalidate: true,
         // obscureText: obscureText,
@@ -45,11 +52,11 @@ class MyCustomTextField extends StatelessWidget {
         keyboardType: kry,
 
         decoration: InputDecoration(
-          prefixIcon: prefixIcon,
           contentPadding: const EdgeInsets.fromLTRB(12, 10, 0, 10),
           hintText: hint,
           filled: true,
           fillColor: const Color(0xFFF0F0F0),
+          prefixIcon: prefixIcon,
           enabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(20)),
               borderSide: BorderSide(color: Color(0xFFF0F0F0), width: 2)),

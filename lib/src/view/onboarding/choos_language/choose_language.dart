@@ -1,9 +1,12 @@
+import 'package:dropshpper_app/src/utils/images.dart';
 import 'package:dropshpper_app/src/view/onboarding/auth/social_auth.dart';
 import 'package:dropshpper_app/src/widgets/my_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import '../../../utils/colors_resource.dart';
 
 class ChooseLanguageScreen extends StatelessWidget {
   const ChooseLanguageScreen({Key? key}) : super(key: key);
@@ -12,12 +15,12 @@ class ChooseLanguageScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: colorTransprent,
         elevation: 0,
         title: Center(
           child: Text(
             "DropShpper",
-            style: TextStyle(color: Colors.black),
+            style: TextStyle(color: colorBlack),
           ),
         ),
       ),
@@ -31,7 +34,7 @@ class ChooseLanguageScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(right: 14.0),
                   child: Image.asset(
-                    "assets/images/internet.png",
+                    Images.chose_internet,
                     height: 200.w,
                     width: 200.w,
                     // color: Colors.black,
@@ -51,7 +54,7 @@ class ChooseLanguageScreen extends StatelessWidget {
                   height: 50,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
-                    color: Colors.black,
+                    color: colorBlack,
                   ),
                   // padding: const EdgeInsets.only(top: 20.0, bottom: 20),
                   child: Padding(
@@ -63,7 +66,7 @@ class ChooseLanguageScreen extends StatelessWidget {
                         CircleAvatar(
                             radius: 20,
                             child: Image.asset(
-                              'assets/images/united-kingdom.png',
+                              Images.uk_flag,
                               height: 30,
                               width: 30,
                             )),
@@ -71,12 +74,12 @@ class ChooseLanguageScreen extends StatelessWidget {
                           child: Text(
                             "English",
                             textAlign: TextAlign.center,
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(color: colorWhite),
                           ),
                         ),
                         Text(
                           "        ",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: colorWhite),
                         )
                       ],
                     ),
@@ -87,7 +90,7 @@ class ChooseLanguageScreen extends StatelessWidget {
                   height: 50,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
-                    border: Border.all(color: Colors.grey),
+                    border: Border.all(color: colorGray),
                     // color: Colors.black,
                   ),
                   // padding: const EdgeInsets.only(top: 20.0, bottom: 20),
@@ -100,7 +103,7 @@ class ChooseLanguageScreen extends StatelessWidget {
                         CircleAvatar(
                             radius: 20,
                             child: Image.asset(
-                              'assets/images/spain.png',
+                              Images.spain_flag,
                               height: 30,
                               width: 30,
                             )),
@@ -108,12 +111,12 @@ class ChooseLanguageScreen extends StatelessWidget {
                           child: Text(
                             "SPANISH",
                             textAlign: TextAlign.center,
-                            style: TextStyle(color: Colors.black),
+                            style: TextStyle(color: colorBlack),
                           ),
                         ),
                         Text(
                           "        ",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: colorWhite),
                         )
                       ],
                     ),
@@ -124,7 +127,7 @@ class ChooseLanguageScreen extends StatelessWidget {
                   height: 50,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
-                    border: Border.all(color: Colors.grey),
+                    border: Border.all(color: colorGray),
                     // color: Colors.black,
                   ),
                   // padding: const EdgeInsets.only(top: 20.0, bottom: 20),
@@ -141,22 +144,22 @@ class ChooseLanguageScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         CircleAvatar(
-                            radius: 20,
+                            radius: 20.r,
                             child: Image.asset(
-                              'assets/images/china.png',
-                              height: 30,
-                              width: 30,
+                              Images.china_flag,
+                              height: 30.h,
+                              width: 30.w,
                             )),
                         Center(
                           child: Text(
                             "CHINESE",
                             textAlign: TextAlign.center,
-                            style: TextStyle(color: Colors.black),
+                            style: TextStyle(color: colorBlack),
                           ),
                         ),
                         Text(
                           "        ",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: colorWhite),
                         )
                       ],
                     ),
@@ -167,7 +170,7 @@ class ChooseLanguageScreen extends StatelessWidget {
                   height: 50,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
-                    border: Border.all(color: Colors.grey),
+                    border: Border.all(color: colorGray),
                     // color: Colors.black,
                   ),
                   // padding: const EdgeInsets.only(top: 20.0, bottom: 20),
@@ -178,30 +181,32 @@ class ChooseLanguageScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         CircleAvatar(
-                            radius: 20,
+                            radius: 20.r,
                             child: Image.asset(
-                              'assets/images/japan.png',
-                              height: 30,
-                              width: 30,
+                              Images.japan_flag,
+                              height: 30.h,
+                              width: 30.w,
                             )),
                         Center(
                           child: Text(
                             "JAPANESE",
                             textAlign: TextAlign.center,
-                            style: TextStyle(color: Colors.black),
+                            style: TextStyle(color: colorBlack),
                           ),
                         ),
                         Text(
                           "        ",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: colorWhite),
                         )
                       ],
                     ),
                   ),
                 ),
                 SizedBox(height: 10),
-                MyCustomButton2(
+                MyCustomButton(
                   text: "CONTINUE WITH ENGLISH",
+                  colorss: appMainColor,
+                  mergin: EdgeInsets.only(top: 10),
                   onPressedbtn: () {
                     Navigator.push(
                       context,

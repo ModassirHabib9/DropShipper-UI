@@ -1,3 +1,5 @@
+import 'package:dropshpper_app/src/utils/colors_resource.dart';
+import 'package:dropshpper_app/src/utils/images.dart';
 import 'package:dropshpper_app/src/widgets/my_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +20,7 @@ class AddressLocationScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               // const SizedBox(height: 50),
-              Image.asset("assets/images/address.png"),
+              Image.asset(Images.address),
               SizedBox(height: 20),
               Text(
                 "Current Home Address",
@@ -26,98 +28,65 @@ class AddressLocationScreen extends StatelessWidget {
               ),
 
               MyCustomButton2(
+                width: double.infinity,
+                text_color: appMainColor,
                 mergin: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.grey),
+                  border: Border.all(color: colorGray),
                   borderRadius: BorderRadius.circular(20),
                 ),
-                colorss: Colors.white,
+                colorss: colorWhite,
                 // text: "CONTINUE TO SIGN UP",
                 onPressedbtn: () {},
-                child: Row(
-                  // mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                        width: 50,
-                        child: Image.asset("assets/images/australia.png")),
-                    const Text(
-                      "Country",
-                      style: TextStyle(color: Colors.black),
-                    ),
-                  ],
-                ),
+                child: Text("Country", style: TextStyle(color: colorBlack)),
+                icon_child:
+                    SizedBox(width: 50, child: Image.asset(Images.austrilia)),
               ),
               // SizedBox(height: 20),
               MyCustomButton2(
                 mergin: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.grey),
+                  border: Border.all(color: colorGray),
                   borderRadius: BorderRadius.circular(20),
                 ),
-                colorss: Colors.white,
+                colorss: colorWhite,
                 // text: "CONTINUE TO SIGN UP",
                 onPressedbtn: () {},
-                child: Row(
-                  // mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                        width: 50, child: Image.asset("assets/images/map.png")),
-                    const Text(
-                      "Region",
-                      style: TextStyle(color: Colors.black),
-                    ),
-                  ],
-                ),
+                child: Text("Region", style: TextStyle(color: colorBlack)),
+                icon_child:
+                    SizedBox(width: 50, child: Image.asset(Images.address_2)),
               ),
               // SizedBox(height: 20),
               MyCustomButton2(
                 mergin: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.grey),
+                  border: Border.all(color: colorGray),
                   borderRadius: BorderRadius.circular(20),
                 ),
-                colorss: Colors.white,
+                colorss: colorWhite,
                 // text: "CONTINUE TO SIGN UP",
                 onPressedbtn: () {},
-                child: Row(
-                  // mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                        width: 50,
-                        child: Image.asset(
-                            "assets/images/architecture-and-city.png")),
-                    const Text(
-                      "City",
-                      style: TextStyle(color: Colors.black),
-                    ),
-                  ],
-                ),
+                child: Text("City", style: TextStyle(color: colorBlack)),
+                icon_child:
+                    SizedBox(width: 50, child: Image.asset(Images.address_3)),
               ),
               MyCustomButton2(
                 mergin: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.grey),
+                  border: Border.all(color: colorGray),
                   borderRadius: BorderRadius.circular(20),
                 ),
-                colorss: Colors.white,
+                colorss: colorWhite,
                 // text: "CONTINUE TO SIGN UP",
                 onPressedbtn: () {},
-                child: Row(
-                  // mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                        width: 50,
-                        child: Image.asset("assets/images/home.png")),
-                    const Text(
-                      "Street address",
-                      style: TextStyle(color: Colors.black),
-                    ),
-                  ],
-                ),
+                child:
+                    Text("Street address", style: TextStyle(color: colorBlack)),
+                icon_child:
+                    SizedBox(width: 50, child: Image.asset(Images.address_4)),
               ),
-              MyCustomButton2(
+              MyCustomButton(
                 mergin: EdgeInsets.only(top: 40, bottom: 20),
-                colorss: Colors.orange,
+                colorss: appMainColor,
                 text: "CONTINUE",
                 onPressedbtn: () {
                   Navigator.push(
@@ -131,7 +100,7 @@ class AddressLocationScreen extends StatelessWidget {
               Text(
                 "Skip >",
                 style: TextStyle(
-                  color: Colors.grey,
+                  color: colorGray,
                   fontSize: 20,
                 ),
               ),

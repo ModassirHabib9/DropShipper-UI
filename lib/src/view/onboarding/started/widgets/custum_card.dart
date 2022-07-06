@@ -1,20 +1,23 @@
+import 'package:dropshpper_app/src/utils/colors_resource.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CustomCard extends StatelessWidget {
-  CustomCard(
+class MyCustomCard extends StatelessWidget {
+  MyCustomCard(
       {Key? key,
       this.leading,
       this.trailing,
       this.title,
       this.subtitle,
-      this.image})
+      this.image,
+      this.onPressed})
       : super(key: key);
   final Widget? leading;
   final Widget? trailing;
   final String? title;
   final String? subtitle;
   final Image? image;
+  final Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +27,7 @@ class CustomCard extends StatelessWidget {
       ),
       elevation: 10,
       child: ListTile(
+        onTap: onPressed,
         leading: Container(
           width: 50,
           height: 50,
@@ -43,7 +47,7 @@ class CustomCard extends StatelessWidget {
                 width: double.infinity,
                 alignment: Alignment.bottomRight,
                 child: const Icon(Icons.arrow_forward_rounded,
-                    color: Colors.orange)),
+                    color: appMainColor)),
           ],
         ),
       ),

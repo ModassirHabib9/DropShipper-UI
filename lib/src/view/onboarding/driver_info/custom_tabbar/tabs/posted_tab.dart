@@ -1,3 +1,4 @@
+import 'package:dropshpper_app/src/utils/images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -17,11 +18,11 @@ class _PostedTabScreenState extends State<PostedTabScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            CustomCard(
+            MyCustomCard(
               title: "Post New delivery",
               subtitle:
                   "Lorem ipsum dolor sit amet, consectetur adipis cing elit.",
-              image: Image.asset('assets/images/package.png'),
+              image: Image.asset(Images.tab_1),
             ),
           ],
         ),

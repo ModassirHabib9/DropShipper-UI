@@ -1,8 +1,11 @@
 import 'dart:async';
 
+import 'package:dropshpper_app/src/utils/colors_resource.dart';
+import 'package:dropshpper_app/src/utils/images.dart';
 import 'package:dropshpper_app/src/view/onboarding/onboarding/onboarding_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -15,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 30),
+        Duration(seconds: 5),
         () => Navigator.pushReplacement(context,
             MaterialPageRoute(builder: (context) => OnbordingScreen())));
   }
@@ -23,12 +26,12 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: colorSplash,
       bottomSheet: Container(
-        height: 100,
-        color: Colors.black,
+        height: 100.h,
+        color: colorSplash,
         child: SpinKitFoldingCube(
-          size: 40,
+          size: 40.h,
           duration: Duration(milliseconds: 1000),
           itemBuilder: (_, int index) {
             return DecoratedBox(
@@ -36,12 +39,12 @@ class _SplashScreenState extends State<SplashScreen> {
               decoration: BoxDecoration(
                 gradient: RadialGradient(
                   colors: [
-                    Colors.orange.shade100,
-                    Colors.orange,
+                    splashColor,
+                    appMainColor,
                   ],
                 ),
                 // color: Colors.white,
-                color: Colors.orange,
+                color: appMainColor,
                 shape: BoxShape.circle,
               ),
             );
@@ -68,10 +71,10 @@ class _SplashScreenState extends State<SplashScreen> {
                         padding: EdgeInsets.all(12),
                         alignment: Alignment.center,
                         child: Image.asset(
-                          'assets/images/splash_logo.png',
+                          Images.splash_logo,
                           // color: Colors.black,
-                          height: 180,
-                          width: 180,
+                          height: 180.h,
+                          width: 180.w,
                           fit: BoxFit.contain,
                         ),
                       ),

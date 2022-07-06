@@ -1,14 +1,9 @@
 import 'package:dropshpper_app/splash_screen.dart';
-import 'package:dropshpper_app/src/view/onboarding/auth/login_auth.dart';
-import 'package:dropshpper_app/src/view/onboarding/auth/sign_up_Auth.dart';
-import 'package:dropshpper_app/src/view/onboarding/auth/social_auth.dart';
-import 'package:dropshpper_app/src/view/onboarding/driver_info/custom_tabbar/widgets/custom_tabbar.dart';
-import 'package:dropshpper_app/src/view/onboarding/driver_info/driver_information.dart';
-import 'package:dropshpper_app/src/view/onboarding/onboarding/onboarding_screen.dart';
-import 'package:dropshpper_app/src/view/onboarding/started/started_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+
+import 'new.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,7 +31,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: Home_Screen_Siven7(),
+      child: fromdata(),
     );
   }
 }

@@ -20,8 +20,10 @@ dependencies:
   get: any
   provider: any
   flutter_spinkit: any
-  shared_preferences: ^2.0.5
+  shared_preferences: any
+  http: any
 #  flutter_auth_buttons: ^3.0.0
+#  flutter_dash: any
 
 dev_dependencies:
   flutter_test:

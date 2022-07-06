@@ -1,3 +1,4 @@
+import 'package:dropshpper_app/src/utils/colors_resource.dart';
 import 'package:flutter/material.dart';
 // import 'package:google_fonts/google_fonts.dart';
 
@@ -19,7 +20,7 @@ class MyTheme {
   );
 
   static final TextStyle chatSenderName = TextStyle(
-    color: Colors.white,
+    color: colorWhite,
     fontSize: 24,
     fontWeight: FontWeight.bold,
     letterSpacing: 1.5,

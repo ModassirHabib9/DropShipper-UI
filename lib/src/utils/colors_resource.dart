@@ -2,6 +2,19 @@ import 'package:flutter/material.dart';
 // import 'package:user_app/provider/theme_provider.dart';
 import 'package:provider/provider.dart';
 
+const Color appMainColor = Color(0xFFFFBB17);
+Color splashColor = Colors.orange.shade100;
+const Color colorBlue = Colors.blue;
+const Color colorBlack = Color(0xFF000000);
+const Color colorSplash = Color(0xFF383A3E);
+const Color colorTransprent = Color(00000000);
+const Color colorWhite = Color(0xFFFFFFFF);
+const Color colorRed = Color(0xFFF30A0A);
+const Color colorGray = Color(0xFF6C757D);
+const Color colorGray_onboarding = Color(0xFFF0F0F0);
+const Color colorYellow = Color(0xFFFFEB3B);
+const Color colorTeal = Color(0xFF009688);
+
 class ColorResources {
   static const Color kblue = Color(0xFF4756DF);
   static const Color kwhite = Color(0xFFFFFFFF);
@@ -12,7 +25,7 @@ class ColorResources {
 
   static const Color BLACK = Color(0xff000000);
   static const Color WHITE = Color(0xffFFFFFF);
-  static const Color COLOR_PRIMARY = Colors.orange; //Color(0xff1B7FED);
+  static const Color ORANGE = Colors.orange; //Color(0xff1B7FED);
   static const Color COLOR_BLUE = Colors.orange;
   static const Color COLUMBIA_BLUE = Color(0xff00ADE3);
   static const Color LIGHT_SKY_BLUE = Color(0xff8DBFF6);

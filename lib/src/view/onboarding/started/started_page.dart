@@ -1,7 +1,10 @@
+import 'package:dropshpper_app/src/utils/images.dart';
+import 'package:dropshpper_app/src/view/onboarding/driver_info/driver_information.dart';
 import 'package:dropshpper_app/src/view/onboarding/started/widgets/custum_card.dart';
 import 'package:dropshpper_app/src/widgets/my_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../auth/sign_up_Auth.dart';
 
@@ -18,24 +21,27 @@ class StartedScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // const SizedBox(height: 50),
-            Image.asset("assets/images/pic1.png"),
+            Image.asset(Images.pic_1),
             SizedBox(height: 20),
             Text(
               "Select to get started",
               style: TextStyle(fontSize: 20),
             ),
             SizedBox(height: 20),
-            CustomCard(
+            MyCustomCard(
               title: "Continue as Driver",
               subtitle:
                   "Lorem ipsum dolor sit amet, consectetur Nam dapibus ac libero id blandit.",
-              image: Image.asset('assets/images/taxi-driver (1).png'),
+              image: Image.asset(Images.start_pic_1),
+              onPressed: () {
+                Get.to(Home_Screen_Siven7());
+              },
             ),
-            CustomCard(
+            MyCustomCard(
               title: "Continue Sender & Receiver",
               subtitle:
                   "Lorem ipsum dolor sit amet, consectetur Nam dapibus ac libero id blandit.",
-              image: Image.asset('assets/images/delivery-courier.png'),
+              image: Image.asset(Images.start_pic_2),
             )
           ],
         ),

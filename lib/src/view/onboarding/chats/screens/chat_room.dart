@@ -1,3 +1,4 @@
+import 'package:dropshpper_app/src/utils/colors_resource.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../app_theme.dart';
@@ -25,9 +26,9 @@ class _ChatRoomState extends State<ChatRoom> {
           children: [
             Expanded(
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: EdgeInsets.symmetric(horizontal: 12),
                 decoration: const BoxDecoration(
-                    color: Colors.white,
+                    color: colorWhite,
                     shape: BoxShape.rectangle,
                     boxShadow: [BoxShadow(spreadRadius: 40, blurRadius: 40)]),
                 child: ClipRRect(

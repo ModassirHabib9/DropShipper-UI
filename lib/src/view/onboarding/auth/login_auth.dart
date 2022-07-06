@@ -1,8 +1,11 @@
 import 'package:dropshpper_app/src/view/onboarding/auth/sign_up_Auth.dart';
+import 'package:dropshpper_app/src/widgets/appbar_back_btn.dart';
 import 'package:dropshpper_app/src/widgets/my_custom_textfield.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../../utils/colors_resource.dart';
+import '../../../utils/images.dart';
 import '../../../widgets/my_button.dart';
 import '../../../widgets/my_custom_password.dart';
 
@@ -15,28 +18,14 @@ class LoginAuthScreen extends StatelessWidget {
       bottomSheet: Container(
           width: double.infinity,
           child: Image.asset(
-            "assets/images/bottom_wave.png",
+            Images.bottom_wave,
             // width: double.infinity,
             fit: BoxFit.fitWidth,
           )),
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leading: Card(
-          elevation: 6,
-          margin: EdgeInsets.all(10),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: IconButton(
-            color: Colors.black,
-            icon: Icon(Icons.arrow_back_ios),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
-        ),
-      ),
+          backgroundColor: colorWhite,
+          elevation: 0,
+          leading: AppbarBackButton()),
       body: SingleChildScrollView(
         padding: EdgeInsets.only(top: 12, left: 15, right: 15),
         child: Column(
@@ -69,12 +58,12 @@ class LoginAuthScreen extends StatelessWidget {
               width: double.infinity,
               child: Text("Forgot Password?",
                   style: TextStyle(
-                    color: Colors.red,
+                    color: colorRed,
                   )),
             ),
-            MyCustomButton2(
+            MyCustomButton(
               mergin: EdgeInsets.only(top: 40, bottom: 20),
-              colorss: Colors.orange,
+              colorss: appMainColor,
               text: "LOGIN",
               onPressedbtn: () {
                 Navigator.push(
@@ -91,12 +80,12 @@ class LoginAuthScreen extends StatelessWidget {
               child: RichText(
                   text: TextSpan(
                 text: "Don't have an account? ",
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: colorBlack),
                 children: [
                   TextSpan(
                     text: "SIGN UP",
                     style: TextStyle(
-                      color: Colors.orange,
+                      color: appMainColor,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

@@ -1,10 +1,12 @@
+import 'package:dropshpper_app/src/utils/images.dart';
+
 class UnbordingContent {
   String? image;
   String? title;
   String? discription;
-  bool? check;
+  // bool? check;
 
-  UnbordingContent({this.image, this.title, this.discription, this.check});
+  UnbordingContent({this.image, this.title, this.discription /*, this.check*/});
 }
 
 List<UnbordingContent> contents = [
@@ -15,11 +17,11 @@ List<UnbordingContent> contents = [
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dapibus ac libero id blandit."),
   UnbordingContent(
       title: 'Fast Delivery',
-      image: 'assets/images/onboard1.png',
+      image: Images.onboarding_1,
       discription:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dapibus ac libero id blandit."),
   UnbordingContent(
-      check: true,
+      // check: true,
       title: 'Reward surprises',
       image: 'assets/images/pic1.png',
       discription:

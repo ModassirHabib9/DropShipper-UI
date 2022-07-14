@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
-import 'new.dart';
+import 'main_page.dart';
+import 'sender_src/view/onboarding/driver_info/custom_tabbar/widgets/new.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +32,8 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: fromdata(),
+      // child: MainPageAppSelection(),
+      child: MainPageAppSelection(),
     );
   }
 }

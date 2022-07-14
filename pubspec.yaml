@@ -22,6 +22,8 @@ dependencies:
   flutter_spinkit: any
   shared_preferences: any
   http: any
+  expandable: any
+#  slimy_card: any
 #  flutter_auth_buttons: ^3.0.0
 #  flutter_dash: any
 
@@ -41,6 +43,13 @@ flutter:
     - assets/
     - assets/images/
     - assets/svg/
+    - assets/driverInfo/
+    - assets/driverHome2/
+    - assets/edit/
+    - assets/edit2/
+    - assets/edit_profile_address1/
+    - assets/bottom/
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

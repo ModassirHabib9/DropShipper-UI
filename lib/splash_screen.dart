@@ -1,8 +1,8 @@
 import 'dart:async';
 
-import 'package:dropshpper_app/src/utils/colors_resource.dart';
-import 'package:dropshpper_app/src/utils/images.dart';
-import 'package:dropshpper_app/src/view/onboarding/onboarding/onboarding_screen.dart';
+import 'package:dropshpper_app/sender_src/utils/colors_resource.dart';
+import 'package:dropshpper_app/sender_src/utils/images.dart';
+import 'package:dropshpper_app/sender_src/view/onboarding/choos_language/choose_language.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(
         Duration(seconds: 5),
         () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => OnbordingScreen())));
+            MaterialPageRoute(builder: (context) => ChooseLanguageScreen())));
   }
 
   @override
